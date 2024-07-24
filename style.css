@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.line {
+  background-color: red;
+  border-radius: 50%;
+  width: 150px;
+  height: 6px;
+}
+.container .logo {
+  font-size: 30px;
+  text-decoration: none;
+  color: #49c5f6;
+  font-weight: bold;
+}
+.navbar {
+  padding: 1rem 0rem;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 20px 0;
+  overflow: scroll;
+}
+.humburger-icon {
+  border: none;
+}
+.img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+@media (min-width: 767.98px) {
+  .humburger-icon {
+    display: none;
+  }
+}
+@media (max-width: 769px) {
+  .footer {
+    width: 100%;
+  }
+}
+/* ======Main section=======  */
+.main-section {
+  background: linear-gradient(to right, #49c5f6, #ff2aef);
+  width: 100%;
+  height: 120vh;
+}
+.main-section-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.main-section-container h2,
+p {
+  font-weight: bold;
+  color: white;
+}
+.main-section .img {
+  animation: slideImgMain 5s infinite ease;
+}
+@keyframes slideImgMain {
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* ============ */
+
+/* =========About========== */
+.About-frames {
+  overflow: hidden;
+}
+.img-about {
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.main-container {
+  width: 100%;
+  height: 50%;
+}
+.main-container h5 {
+  background: linear-gradient(to right, #f4d03f, #16a085);
+  width: 100%;
+  height: 280px;
+  border: 1px solid black;
+  overflow: scroll;
+}
+.main-container img {
+  animation: slideAbout 6s infinite;
+}
+@keyframes slideAbout {
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* ================================ */
+/* ==============Service box========== */
+.service-box {
+  height: 100%;
+  padding: 60px 30px;
+  text-align: center;
+  transition: 0.5s;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(1, 41, 112, 0.88);
+}
+.service-box:hover {
+  transform: scale(1.1);
+}
+.service-box:hover i {
+  color: #f4d03f;
+}
+.bxs-camera {
+  font-size: 4rem;
+
+  color: black;
+}
+.bxs-store-alt {
+  font-size: 4rem;
+
+  color: black;
+}
+.bx-cart {
+  font-size: 4rem;
+
+  color: black;
+}
+.bx-id-card {
+  font-size: 4rem;
+
+  color: black;
+}
+
+/* ===========Project box=========== */
+.project-box {
+  overflow: hidden;
+  position: relative;
+  height: 20rem;
+  box-shadow: 0 0 20px rgba(1, 41, 112, 0.88);
+}
+.project-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+.project-box button {
+  position: absolute;
+  z-index: 100;
+  display: none;
+}
+.box-cover {
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.5s;
+}
+.project-box:hover img {
+  transform: scale(1.1);
+  filter: blur(2px);
+}
+.project-box:hover button {
+  opacity: 1;
+  display: block;
+}
+
+/* ==============Contact========= */
+.contact img {
+  width: 100%;
+  animation: slideImg 5s infinite;
+}
+
+@keyframes slideImg {
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
